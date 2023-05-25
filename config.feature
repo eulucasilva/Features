@@ -10,14 +10,14 @@ Contexto: Dado que eu estou na página do produto
 
 Esquema do Cenário: Seleção de cor, tamanho e quantidades devem ser obrigatórios
     Quando eu clico no botão Comprar
-    E o <campo> não está preenchido
+    E os campos <cor>, <tamanho> ou <quantidade> não estão preenchidos
     Então deve ser exibido a mensagem Campo obrigatório
-
-    | campo      |
-
-    | cor        | 
-    | tamanho    |
-    | quantidade |
+    Exemplos:
+    
+    | cor    | tamanho | quantidade |
+ 
+    | Blue   |     S   |     5      |
+    | Orange |    XL   |     2      |
 
 Cenário: Deve permitir apenas 10 produtos por venda
     Quando eu preencho o formulário

@@ -11,23 +11,19 @@ Contexto:
 
 Esquema do Cenário: Deve ser cadastrado com todos os dados obrigatórios
     Quando eu clico no botão Finalizar compra
-    E o <campo> não está preenchido
+    E os campos <nome>, <sobrenome>, <pais>, <endereco>, <cidade>, <cep>, <telefone>, <email>  não estão preenchidos
     Então deve ser exibido a mensagem "Deve ser preenchido os campos obrigatórios"
+    Exemplos:
 
-    | campo      |
+    |   nome    | sobrenome |    país    |  endereço  |  cidade   |   cep     |  telefone   |     email        |
+    |  Marcelo  |   Arruda  |   Brasil   |    Rua Z   | São Paulo |  85900646 | 85996314574 | marcelo@ebac.com |
+    |    Juan   |  Hernadez |   Espanha  |    Rua E   |   Madrid  |  78911657 | 35469713346 |   juan@ebac.com  |
 
-    | nome      | 
-    | sobrenome |
-    | país      |
-    | endereço  |
-    | cidade    |
-    | cep       |
-    | telefone  |
-    | email     |
 
 Esquema do Cenário: Campo e-mail com formato inválido
     Quando eu preencho o campo email com <email>
     Então deve ser exibido a mensagem "Email inválido"
+    Exemplos:
 
     | email      |
 
